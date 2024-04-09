@@ -1,0 +1,121 @@
+#USERS
+### Create USer
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "khadims",
+  "email"    : "kmusaidsyah@gmail.com",
+  "name"     : "Khadhi Musaid Syah",
+  "password" : "musimsemi123"
+}
+### Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "jokes07",
+  "password" : "musimsemi123"
+}
+### Get User
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 62e71cb7-0ef1-42aa-ad7e-105d525bec95
+
+### Update User
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: e6becd2e-4721-4384-be50-e27873271310
+
+{
+  "name" : "Nabila Hamda",
+  "email": "nabilaadama@gmail.com"
+}
+### Logout User
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: f5f7d45e-d1b8-4743-a75a-2969dce26fad
+###
+
+#CONTACTS
+### Create Contact
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 33b1b00a-0ffd-4e4a-9d02-c0d880591d38
+
+{
+  "firstName" : "Khadhi",
+  "lastName": "Musaid",
+  "email": "kopeeedhh@gmail.com",
+  "phone": "081213633684"
+}
+### Get Contacts
+GET http://localhost:3000/api/contacts?name=Musaid
+Content-Type: application/json
+Accept: application/json
+Authorization: ca3eb909-da75-4732-8948-5daae47d53b1
+
+### Update Contacts
+PATCH http://localhost:3000/api/contacts/303
+Content-Type: application/json
+Accept: application/json
+Authorization: e1c8bc57-ad83-4119-9789-d2df93d80250
+
+{
+  "phone": "082110769987"
+}
+### Delete Contacts
+DELETE http://localhost:3000/api/contacts/305
+Content-Type: application/json
+Accept: application/json
+Authorization: b5c78c8f-09a4-45f1-902a-75a6c7bf9a86
+###
+
+#ADDRESSES
+### Create Addresses
+POST http://localhost:3000/api/contacts/558/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 33b1b00a-0ffd-4e4a-9d02-c0d880591d38
+
+{
+  "street"     : "Jl. Antang Raya",
+  "city"       : "Palopo",
+  "province"   : "Sulawesi Selatan",
+  "country"    : "Indonesia",
+  "postal_code": "51102387"
+}
+
+### Update Addresses
+PATCH http://localhost:3000/api/contacts/558/addresses/82
+Content-Type: application/json
+Accept: application/json
+Authorization: 33b1b00a-0ffd-4e4a-9d02-c0d880591d38
+
+{
+  "city"       : "Makassar"
+}
+
+### List Addresses
+GET http://localhost:3000/api/contacts/558/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: ca3eb909-da75-4732-8948-5daae47d53b1
+
+### Get certain Address
+GET http://localhost:3000/api/contacts/558/addresses/78
+Content-Type: application/json
+Accept: application/json
+Authorization: ca3eb909-da75-4732-8948-5daae47d53b1
+
+### Remove Address
+DELETE http://localhost:3000/api/contacts/558/addresses/81
+Content-Type: application/json
+Accept: application/json
+Authorization: 33b1b00a-0ffd-4e4a-9d02-c0d880591d38
